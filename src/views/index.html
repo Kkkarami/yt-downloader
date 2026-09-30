@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Downloader</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<main class="container">
+
+    <header class="header">
+        <h1>YouTube Downloader</h1>
+        <p>Завантажуйте відео з потрібною якістю та аудіодоріжкою</p>
+    </header>
+
+    <div class="search">
+        <input
+            type="text"
+            id="urlInput"
+            placeholder="Вставте посилання на YouTube"
+        >
+
+        <button id="searchButton">
+            Знайти
+        </button>
+    </div>
+
+    <div id="result"></div>
+
+    <div id="audioSection" class="hidden">
+
+        <section class="section">
+            <h2>Аудіодоріжка</h2>
+
+            <h3>Популярні</h3>
+
+            <div id="popularLanguages" class="languages"></div>
+        </section>
+
+        <section class="section">
+            <h3>Інші мови</h3>
+
+            <div class="language-search-container">
+                <input
+                    type="text"
+                    id="languageSearch"
+                    class="language-search"
+                    placeholder="Пошук мови..."
+                    autocomplete="off"
+                >
+
+                <div id="languageSuggestions" class="language-suggestions"></div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Якість відео</h2>
+
+            <div id="videoQuality" class="video-quality"></div>
+        </section>
+
+        <button id="downloadButton" class="download-button hidden">
+            Завантажити
+        </button>
+            <div id="downloadProgress" class="download-progress hidden">
+                <div class="download-progress-text">
+                    <span id="downloadStatus">Підготовка...</span>
+                    <span id="downloadPercent">0%</span>
+                </div>
+
+            <div class="download-progress-bar">
+            <div id="downloadProgressFill"></div>
+        </div>
+</div>
+    </div>
+
+</main>
+
+<script src="/js/script.js"></script>
+</body>
+</html>
